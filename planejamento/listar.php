@@ -13,17 +13,17 @@ $usuario_nome = $_SESSION['usuario'];
 
 // Busca o ID real do usuário no banco
 $sqlUser = "SELECT id FROM usuarios WHERE nome = '$usuario_nome' LIMIT 1";
-$resultUser = $conn->query($sqlUser);
+$resultUser = $conn->query($sqlUser); //Resultado da pesquisa
 
 if ($resultUser->num_rows == 0) {
     echo "Erro: usuário não encontrado no banco!";
-    exit();
+    exit(); //Interrompe
 }
 
 $userData = $resultUser->fetch_assoc();
 $usuario_id = $userData['id'];
 
-// Agora sim: lista apenas os planejamentos deste usuário
+// lista apenas os planejamentos deste usuário
 $sql = "SELECT * FROM planejamentos WHERE usuario_id = $usuario_id ORDER BY criado_em DESC";
 $result = $conn->query($sql);
 ?>

@@ -11,20 +11,20 @@ if (!isset($_GET['id']) || empty($_GET['id'])) {
 $id = $_GET['id'];
 
 // Se enviou o formulário, atualiza
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+if ($_SERVER['REQUEST_METHOD'] === 'POST') { //ele apretou para enviar? (POST)
 
-    $titulo = $_POST['titulo'];
+    $titulo = $_POST['titulo'];  //pega os dados do usuário
     $objetivo = $_POST['objetivo'];
     $status = $_POST['status'];
 
-    // Removido usuario_id porque não existe
-    $sql = "UPDATE planejamentos 
+    //atualiza um registro na tabela
+    $sql = "UPDATE planejamentos
             SET titulo='$titulo', 
                 objetivo='$objetivo', 
                 status='$status'
-            WHERE id=$id";
+            WHERE id=$id"; //define quais campos serão atualizados
 
-    $conn->query($sql);
+    $conn->query($sql); //execulta no banco
 
     header("Location: listar.php");
     exit();

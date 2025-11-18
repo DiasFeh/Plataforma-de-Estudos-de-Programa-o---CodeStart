@@ -15,18 +15,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $user = $busca->fetch_assoc();
     $usuario_id = $user['id'];
 
-    $titulo = $_POST['titulo'];
+    $titulo = $_POST['titulo']; //recebe do usuário - formulário
     $objetivo = $_POST['objetivo'];
     $status = $_POST['status'];
-
+        
     $sql = "INSERT INTO planejamentos (titulo, objetivo, status, usuario_id) 
-        VALUES ('$titulo', '$objetivo', '$status', $usuario_id)";
+        VALUES ('$titulo', '$objetivo', '$status', $usuario_id)"; //cria um novo registro na tabela
 
 
-    $conn->query($sql);
+    $conn->query($sql); //inserindo no banco
 
-    header("Location: listar.php");
-    exit();
+    header("Location: listar.php"); //redirecionando
+    exit(); //impede qualquer execução extra
 }
 ?>
 <!DOCTYPE html>

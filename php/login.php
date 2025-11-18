@@ -18,10 +18,18 @@ if ($result->num_rows > 0) {
         exit;
 
     } else {
-        echo "Senha incorreta!";
+        echo "<script>
+                alert('Senha incorreta!');
+                window.location.href = '../index.html';
+              </script>";
+        exit();
     }
 } else {
-    echo "Usuário não encontrado!";
+    echo "<script>
+            alert('Usuário não encontrado!');
+            window.location.href = '../index.html';
+          </script>";
+    exit();
 }
 
 $conn->close();
