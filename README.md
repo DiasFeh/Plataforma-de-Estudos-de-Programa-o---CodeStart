@@ -1,1 +1,1 @@
-# Plataforma-de-Estudos-de-Programa-o---CodeStart
+# Plataforma-para-Estudos-de-Programa-o-CodeStart
