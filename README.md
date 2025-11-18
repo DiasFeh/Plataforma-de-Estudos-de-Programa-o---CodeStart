@@ -1,6 +1,14 @@
 # Plataforma-para-Estudos-de-Programa--CodeStart
 # O CodeStart é uma plataforma gratuita criada para ajudar iniciantes e eestudantes a entrarem no mundo da programação de maneira simples, acessível e principalmente organizada.
 # Criado com as linguagens PHP, MySQL, Html e o framework bootstrap
+# Como executar o projeto:
+# 1. Abrir o XAMPP Control Panel.
+# 2. Ligar o Apache e o MySQL.
+# 3. Colocar a pasta do projeto dentro de htdocs.
+# 4. Importe o banco de dados ao http://localhost/phpmyadmin/
+# 5. Abrir o navegador e acessar:
+#      http://localhost/codestart/
+ 
 <img width="1876" height="1033" alt="image" src="https://github.com/user-attachments/assets/7602de2d-c24a-4968-bcf9-b6be0b5a71e3" />
 <img width="1763" height="999" alt="image" src="https://github.com/user-attachments/assets/39f49637-e59c-4ab7-aedc-2f2aaae1685b" />
 <img width="1883" height="847" alt="image" src="https://github.com/user-attachments/assets/7ad7b212-5f02-4a40-8226-8bc43019a71b" />
